@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Portfolio — Work</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  :root{--gutter:24px}
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{height:100%;margin:0;font-family:"Work Sans",sans-serif;}
+
+  .site-header{position:fixed;left:0;right:0;top:0;z-index:60;padding:18px 0;background:rgba(255,255,255,0)}
+  .center-nav{display:flex;justify-content:center;gap:36px;font-size:20px}
+
+  main{padding-top:90px;padding-left:48px;padding-right:48px}
+
+  .page-bg {
+  position: fixed;
+  inset: 0;                 
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center top;
+  pointer-events: none;     
+  z-index: -1;              
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+  .works-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:var(--gutter);
+    max-width:1200px;
+    margin:48px auto;
+  }
+
+  .work-item{display:block;text-decoration:none;color:inherit;outline:none}
+  .work-item:focus-visible{box-shadow:0 0 0 4px rgba(0,0,0,0.12);border-radius:4px}
+
+  .thumb{
+    width:100%;
+    aspect-ratio:1/1;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:transparent;
+  }
+  .thumb img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+    -webkit-user-drag:none;
+  }
+
+  .work-caption{margin-top:10px;font-weight:600;font-size:16px}
+  .work-sub{margin:0;font-size:14px;color:#111;opacity:0.9}
+
+  @media (max-width:1100px){
+    .works-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  }
+  @media (max-width:600px){
+    .works-grid{grid-template-columns:1fr;gap:16px}
+    main{padding-left:20px;padding-right:20px;padding-top:80px}
+    .center-nav{gap:18px;font-size:18px}
+  }
+</style>
+</head>
+<body>
+    <img src="images/workpage.jpg" alt="" class="page-bg">
+
+  <header class="site-header">
+    <nav class="center-nav">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link active" href="work.html">Work</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    
+
+      <div class="works-grid" role="list">
+        <a class="work-item" role="listitem" href="work1.html" aria-label="Chazen Matcha packaging">
+          <div class="thumb">
+            <img src="images/work1.jpg" alt="Chazen Matcha packaging">
+          </div>
+          <div class="work-caption">CHAZEN MATCHA
+            <div class="work-sub">Packaging Design</div>
+          </div>
+        </a>
+
+        <a class="work-item" role="listitem" href="work2.html" aria-label="Recipe Book Design">
+          <div class="thumb">
+            <img src="images/work2.jpg" alt="Recipe Book Design">
+          </div>
+          <div class="work-caption">Recipe Book Design
+          </div>
+        </a>
+
+        <a class="work-item" role="listitem" href="work3.html" aria-label="Recipe Cards Design">
+          <div class="thumb">
+            <img src="images/work3.jpg" alt="Recipe Cards Design">
+          </div>
+          <div class="work-caption">Recipe Cards Design
+          </div>
+        </a>
+
+        <a class="work-item" role="listitem" href="work4.html" aria-label="Digital Rendering">
+          <div class="thumb">
+            <img src="images/work4.jpg" alt="Digital Rendering">
+          </div>
+          <div class="work-caption">Digital Rendering
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

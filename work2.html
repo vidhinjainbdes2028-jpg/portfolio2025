@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Work — Studio Ghibli Recipe Book</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --page-w:1440px;
+      --g:32px;
+    }
+    html,body{height:100%;margin:0;font-family:"Work Sans", system-ui, sans-serif;color:#111;}
+    .page{max-width:var(--page-w);margin:0 auto;position:relative;padding:48px 40px 80px;box-sizing:border-box;overflow:hidden;}
+    .page-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;object-position:center top;z-index:-1;pointer-events:none;opacity:1;}
+
+    .nav-center{display:flex;justify-content:center;gap:36px;margin-bottom:18px}
+    .nav-center a{color:#111;text-decoration:none;font-size:16px}
+
+    .page-title{font-family:"Instrument Serif", serif;font-size:48px;text-align:center;margin:4px 0 36px}
+
+    /* top row */
+    .top-row{display:grid;grid-template-columns: 828px 445px;gap:var(--g);align-items:start;justify-content:center;margin:0 auto 28px;}
+    .top-left img{width:828px;height:857px;object-fit:cover;display:block;transform:rotate(20deg);margin-left:12px;}
+    .top-right .small{width:445px;height:332px;object-fit:cover;display:block;box-shadow:0 12px 20px rgba(0,0,0,0.10);margin-bottom:18px}
+    .top-right .desc{font-size:16px;line-height:1.6}
+
+    /* second row */
+    .row-2{display:grid;grid-template-columns:382px 374px 1fr;gap:var(--g);align-items:start;justify-content:center;margin:46px auto 12px;max-width:1180px}
+    .row-2 img{display:block;object-fit:cover;box-shadow:0 12px 20px rgba(0,0,0,0.10)}
+    .row-2 .text{font-size:15px;line-height:1.6;padding:40px 0 0 0}
+
+    /* third row */
+    .row-3{display:grid;grid-template-columns:380px 379px 1fr;gap:var(--g);align-items:start;justify-content:center;margin:26px auto 6px;max-width:1180px}
+    .row-3 img{display:block;object-fit:cover;box-shadow:0 12px 20px rgba(0,0,0,0.10)}
+
+    /* fourth row */
+    .finals{display:grid;grid-template-columns:repeat(4,280px);gap:20px;justify-content:center;margin:36px auto 10px;align-items:start}
+    .finals img{width:280px;height:379px;object-fit:cover;display:block;box-shadow:0 8px 18px rgba(0,0,0,0.12)}
+
+    .section-heading{font-family:"Instrument Serif", serif;font-size:34px;text-align:center;margin:36px 0}
+
+    @media (max-width:1200px){
+      .top-row{grid-template-columns:1fr;gap:20px}
+      .top-left img{width:100%;height:auto;transform:none;margin-left:0}
+      .top-right .small{width:100%;height:auto}
+      .row-2, .row-3{grid-template-columns:1fr;max-width:100%}
+      .finals{grid-template-columns:repeat(2,1fr);gap:18px}
+      .page{padding:28px 18px}
+      .page-title{font-size:36px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <img class="page-bg" src="images/work2_bg.jpg" alt="background">
+
+    <nav class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="work.html">Work</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1 class="page-title">STUDIO GHIBLI RECIPE BOOK</h1>
+
+    <div class="top-row">
+      <div class="top-left">
+        <img src="images/work2p1.svg" alt="hero book">
+      </div>
+
+      <div class="top-right">
+        <img class="small" src="images/work2p2.png" alt="hero photograph">
+        <p class="desc">Tales from the Ghibli Table is a handcrafted recipe book reimagining iconic Studio Ghibli meals. Blending nostalgia, watercolor illustrations, and comforting recipes, it captures the warmth of a grandmother’s journal while offering a magical, family-friendly cooking experience.</p>
+      </div>
+    </div>
+
+    <h2 class="section-heading">First Prototype</h2>
+
+    <div class="row-2">
+      <div><img src="images/work2p3.jpg" width="382" height="516" alt="proto left"></div>
+      <div><img src="images/work2p4.jpg" width="374" height="516" alt="proto right"></div>
+      <div class="text">
+        <p>The first prototype was handmade with rough paper and uncoloured sketches for a raw, sketchbook feel. Based on feedback, the final version used better paper, coloured illustrations, and digitally printed text for improved readability and a refined finish.</p>
+      </div>
+    </div>
+
+    <div class="row-3">
+      <div><img src="images/work2p5.jpg" width="380" height="517" alt="proto 2 left"></div>
+      <div><img src="images/work2p6.jpg" width="379" height="517" alt="proto 2 right"></div>
+      <div></div>
+    </div>
+
+    <h2 class="section-heading">Some key pages from the Final Book</h2>
+
+    <div style="display:flex;justify-content:center;margin-bottom:18px;">
+      <div style="max-width:980px;">
+        <div style="display:flex;gap:18px;align-items:flex-start;justify-content:center;margin-bottom:18px;">
+          <img src="images/work2p7.JPG" width="280" height="379" alt="key page 1">
+          <img src="images/work2p8.JPG" width="280" height="379" alt="key page 2">
+          <img src="images/work2p9.JPG" width="280" height="379" alt="key page 3">
+        </div>
+        <div style="display:flex;gap:18px;align-items:flex-start;justify-content:center;">
+          <img src="images/work2p10.JPG" width="280" height="379" alt="final 1">
+          <img src="images/work2p11.JPG" width="280" height="379" alt="final 2">
+          <img src="images/work2p12.JPG" width="280" height="379" alt="final 3">
+          <img src="images/work2p13.JPG" width="280" height="379" alt="final 4">
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:28px;">
+      <a href="work1.html" style="display:inline-block;padding:10px 18px;border:2px solid #111;text-decoration:none;color:#111;margin-right:12px;">Back</a>
+      <a href="work3.html" style="display:inline-block;padding:10px 18px;border:2px solid #111;text-decoration:none;color:#111;">Next</a>
+    </div>
+
+  </div>
+</body>
+</html>

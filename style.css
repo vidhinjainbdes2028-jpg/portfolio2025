@@ -1,0 +1,90 @@
+/* reset & navbar overlay basics — keep these in your stylesheet */
+html,body{height:100%;margin:0;padding:0}
+.site-header{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,0)}
+.center-nav{display:flex;justify-content:center;gap:36px;padding:18px 12px;font-family:"Work Sans",sans-serif}
+
+/* hero wrapper should NOT push the image down with top padding */
+.hero{position:relative;background:#f6f1eb;overflow:hidden}
+
+/* reset */
+html,body { margin:0; padding:0; height:100%; }
+
+/* NAV - overlaying the hero */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;                /* sits on top of the image */
+  pointer-events: auto;
+  background: rgba(255,255,255,0); /* fully transparent so art shows through */
+}
+
+/* center nav horizontally */
+.center-nav {
+  display:flex;
+  justify-content:center;
+  gap:36px;
+  padding: 18px 12px;          /* spacing for clickable area */
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+}
+
+/* nav links (Bootstrap .nav-link still works) */
+.center-nav .nav-link {
+  color: #000;                 /* black text on top of artwork */
+  text-decoration: none;
+  padding: 6px 8px;
+}
+.center-nav .nav-link:hover { text-decoration: underline; }
+
+/* HERO - image sits at very top of document under the fixed nav */
+.hero {
+  position: relative;
+  background-color: #f6f1eb; /* paper fallback */
+  overflow: hidden;
+}
+
+/* ensure the image starts at the top (no padding pushing it down) */
+.hero-img {
+  display: block;
+  width: 100vw;               /* fill viewport width */
+  max-width: 2200px;
+  height: auto;
+  margin: 0 auto;
+  -webkit-user-drag: none;
+  user-select: none;
+  object-fit: cover;          /* keep composition pleasing while filling width */
+  /* optional: if you want the image slightly pushed down so the navbar sits visually on top without hiding letters:
+     transform: translateY(6px);
+     (adjust value as needed) */
+}
+
+/* On small screens reduce nav gap */
+@media (max-width: 768px){
+  .center-nav { gap: 18px; font-size: 18px; padding: 12px 8px; }
+}
+
+:root { --nav-h: 88px; } /* set to your nav height */
+
+/* Limit the image height so it never forces extra page scroll */
+.hero-img{
+  display:block;
+  width:auto;                                     /* preserve natural width */
+  max-width:100vw;                                /* don't overflow horizontally */
+  max-height: calc(100vh - var(--nav-h));         /* fit into remaining viewport height */
+  margin: 0 auto;
+  object-fit: contain;                            /* show whole image, might leave space below */
+  -webkit-user-drag: none;
+}
+
+.about-text {
+  position: absolute;
+  top: 180px;   /* <<< change this number to move text lower or higher */
+  left: 0;
+  width: 100%;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+
